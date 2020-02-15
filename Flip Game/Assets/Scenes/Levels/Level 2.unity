@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1757,6 +1757,11 @@ PrefabInstance:
       propertyPath: flip
       value: 
       objectReference: {fileID: 1445350431}
+    - target: {fileID: 4169077588963837498, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: boxCollisionMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b43b51851cebb0549b7330ab79263e95, type: 3}
 --- !u!1 &1401499309

@@ -18,8 +18,7 @@ public class Door : MonoBehaviour
         if (flip.flipped && other.tag == "Player")
         {
             other.GetComponent<Player>().transitioning = true;
-            other.transform.position = transform.position;
-            LevelLoader loader = GameObject.FindObjectOfType(typeof(LevelLoader)) as LevelLoader;
+            other.transform.position = new Vector3(transform.position.x, transform.position.y, other.transform.position.z);
             loader.LoadNextLevel();
         }
     }

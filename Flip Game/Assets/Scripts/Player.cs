@@ -10,13 +10,15 @@ public class Player : MonoBehaviour
     public float timeToJumpApex = .4f;
     public float moveSpeed = 6;
     public GameObject flip;
-    float accelerationTime = .075f;
+    public bool transitioning = false;
 
+    float accelerationTime = .075f;
     float gravity;
     float maxJumpVelocity;
     float minJumpVelocity;
     Vector3 velocity;
     float velocityXSmoothing;
+    bool frozen = false;
 
     Controller2D controller;
 
@@ -31,9 +33,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        frozen = false;
         if (flip.GetComponent<Flip>().flipping)
         {
+            frozen = true;
             transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
+        if (transitioning)
+        {
+            frozen = true;
+            transform.localScale -= Vector3.one * Time.deltaTime * 3f;
+            transform.Rotate(new Vector3(0, 0, 5));
+        }
+
+        if (frozen)
+        {
             velocity.y = 0;
         }
         else
@@ -63,6 +77,5 @@ public class Player : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         }
-        
     }
 }

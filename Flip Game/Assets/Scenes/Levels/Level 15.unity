@@ -206,6 +206,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 60359290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &60359292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7482566608847915589, guid: 927e90b9cadc7a044b0324343a2d4326,
+    type: 3}
+  m_PrefabInstance: {fileID: 60359290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &607666264
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +248,7 @@ Transform:
   - {fileID: 1910351415}
   - {fileID: 2002652109}
   - {fileID: 60359291}
+  - {fileID: 1354951282}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -579,6 +586,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2776c91244f68554aa393452ee1e5e02, type: 3}
+--- !u!1001 &1354951281
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 607666265}
+    m_Modifications:
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837496, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169077588963837497, guid: b43b51851cebb0549b7330ab79263e95,
+        type: 3}
+      propertyPath: flip
+      value: 
+      objectReference: {fileID: 60359292}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b43b51851cebb0549b7330ab79263e95, type: 3}
+--- !u!4 &1354951282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4169077588963837494, guid: b43b51851cebb0549b7330ab79263e95,
+    type: 3}
+  m_PrefabInstance: {fileID: 1354951281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1359208024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,7 +753,7 @@ GameObject:
   - component: {fileID: 1399443369}
   - component: {fileID: 1399443368}
   - component: {fileID: 1399443367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

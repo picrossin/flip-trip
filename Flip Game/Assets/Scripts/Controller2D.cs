@@ -6,6 +6,7 @@ using UnityEngine;
 public class Controller2D : MonoBehaviour
 {
     public LayerMask collisionMask;
+    public LayerMask boxCollisionMask;
 
     const float skinWidth = 0.015f;
     public int horizontalRayCount = 4;
@@ -49,6 +50,7 @@ public class Controller2D : MonoBehaviour
             Vector2 rayOrigin = directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
+            RaycastHit2D boxHit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, boxCollisionMask);
 
             Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
 
@@ -57,8 +59,16 @@ public class Controller2D : MonoBehaviour
                 velocity.x = (hit.distance - skinWidth) * directionX;
                 rayLength = hit.distance;
 
-                collisions.left = directionX == -1;
-                collisions.right = directionX == 1;
+                if (directionX == -1) collisions.left = true;
+                if (directionX == 1) collisions.right = true;
+            }
+            if (boxHit && boxHit.transform.GetComponent<Box>().nearWall)
+            {
+                velocity.x = (boxHit.distance - skinWidth) * directionX;
+                rayLength = boxHit.distance;
+
+                if (directionX == -1) collisions.left = true;
+                if (directionX == 1) collisions.right = true;
             }
         }
     }
@@ -72,6 +82,7 @@ public class Controller2D : MonoBehaviour
             Vector2 rayOrigin = directionY == -1 ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
             rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+            RaycastHit2D boxHit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, boxCollisionMask);
 
             Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
 
@@ -79,6 +90,14 @@ public class Controller2D : MonoBehaviour
             {
                 velocity.y = (hit.distance - skinWidth) * directionY;
                 rayLength = hit.distance;
+
+                collisions.below = directionY == -1;
+                collisions.above = directionY == 1;
+            }
+            if (boxHit)
+            {
+                velocity.y = (boxHit.distance - skinWidth) * directionY;
+                rayLength = boxHit.distance;
 
                 collisions.below = directionY == -1;
                 collisions.above = directionY == 1;

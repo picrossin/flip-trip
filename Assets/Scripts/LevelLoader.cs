@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    AudioManager am;
     public Animator transition;
 
     public float transitionTime = 1f;
+
+    void Start()
+    {
+        am = FindObjectOfType<AudioManager>();
+    }
 
     void Update()
     {
@@ -19,7 +25,15 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        if (SceneManager.GetActiveScene().buildIndex == 15)
+        {
+            Destroy(am.gameObject);
+            StartCoroutine(LoadLevel(0));
+        }
+        else
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
     }
 
     public void RestartLevel()

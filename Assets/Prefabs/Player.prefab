@@ -151,6 +151,8 @@ MonoBehaviour:
   moveSpeed: 7
   flip: {fileID: 0}
   transitioning: 0
+  jumpSound: {fileID: 4234131065715018063, guid: 943cf83b2a6c8e84f847f67bd40d1fc0,
+    type: 3}
 --- !u!50 &5030110995513132518
 Rigidbody2D:
   serializedVersion: 4

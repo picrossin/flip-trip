@@ -9,6 +9,7 @@ public class Flip : MonoBehaviour
     public GameObject level;
     public float smooth = 1f;
     public AudioClip downTrack;
+    public GameObject flipSound;
 
     AudioManager am;
     BoxCollider2D collider;
@@ -50,6 +51,7 @@ public class Flip : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Instantiate(flipSound, transform.position, transform.rotation);
             am.ChangeBGM(downTrack);
             flipping = true;
             collider.enabled = false;

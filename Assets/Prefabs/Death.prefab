@@ -46,3 +46,8 @@ MonoBehaviour:
   waitTime: 2
   bodyPart: {fileID: 6072869512201110625, guid: 25d0e622c7a10cc42999992c767566b5,
     type: 3}
+  explosionSound: {fileID: 4234131065715018063, guid: 9f074ca6e397b3c4daba778c33eff3f5,
+    type: 3}
+  screamSound: {fileID: 4234131065715018063, guid: c927b7d863c6222418941eadc00143ff,
+    type: 3}
+  upTrack: {fileID: 8300000, guid: 45d76402a1194164984288755deb094b, type: 3}

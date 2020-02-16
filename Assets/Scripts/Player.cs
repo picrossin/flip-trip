@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 6;
     public GameObject flip;
     public bool transitioning = false;
+    public GameObject jumpSound;
 
     float accelerationTime = .075f;
     float gravity;
@@ -38,6 +39,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (Input.GetButtonDown("Submit"))
+        {
+            Application.Quit();
+        }
 
         frozen = false;
         if (flip.GetComponent<Flip>().flipping)
@@ -91,12 +97,13 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
+            if (Input.GetButtonDown("Jump") && controller.collisions.below)
             {
                 velocity.y = maxJumpVelocity;
+                Instantiate(jumpSound, transform.position, transform.rotation);
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetButtonUp("Jump"))
             {
                 if (velocity.y > minJumpVelocity)
                 {

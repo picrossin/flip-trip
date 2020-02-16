@@ -9,6 +9,14 @@ public class LevelLoader : MonoBehaviour
 
     public float transitionTime = 1f;
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Restart"))
+        {
+            RestartLevel();
+        }
+    }
+
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upTrack: {fileID: 8300000, guid: 45d76402a1194164984288755deb094b, type: 3}
+  winSound: {fileID: 4234131065715018063, guid: b03a2e8c6c4cc6e46949720a660dfd30,
+    type: 3}
 --- !u!114 &7196028269169929469
 MonoBehaviour:
   m_ObjectHideFlags: 0

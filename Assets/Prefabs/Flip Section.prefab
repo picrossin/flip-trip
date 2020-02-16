@@ -127,6 +127,8 @@ MonoBehaviour:
   level: {fileID: 0}
   smooth: 3
   downTrack: {fileID: 8300000, guid: a1b20d8193f8bc343bfe0070ae0b41fb, type: 3}
+  flipSound: {fileID: 4234131065715018063, guid: 57b786393c5039545ad35f750394370f,
+    type: 3}
 --- !u!114 &67110792928511856
 MonoBehaviour:
   m_ObjectHideFlags: 0

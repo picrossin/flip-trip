@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class Door : MonoBehaviour
 {
     public AudioClip upTrack;
+    public GameObject winSound;
 
     Flip flip;
     LevelLoader loader;
@@ -36,12 +37,19 @@ public class Door : MonoBehaviour
                 light.enabled = false;
             }
         }
+
+        if (Input.GetButtonDown("Skip"))
+        {
+            loader.LoadNextLevel();
+            am.ChangeBGM(upTrack);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (flip.flipped && other.tag == "Player")
         {
+            Instantiate(winSound, transform.position, transform.rotation);
             am.ChangeBGM(upTrack);
             other.GetComponent<Player>().transitioning = true;
             other.transform.position = new Vector3(transform.position.x, transform.position.y, other.transform.position.z);

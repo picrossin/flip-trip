@@ -19,12 +19,16 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     float velocityXSmoothing;
     bool frozen = false;
+    SpriteRenderer renderer;
+    Animator animator;
 
     Controller2D controller;
 
     void Start()
     {
         controller = GetComponent<Controller2D>();
+        renderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
@@ -33,6 +37,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
         frozen = false;
         if (flip.GetComponent<Flip>().flipping)
         {
@@ -52,12 +58,38 @@ public class Player : MonoBehaviour
         }
         else
         {
+            if (input.x > 0)
+            {
+                renderer.flipX = false;
+            }
+            else if (input.x < 0)
+            {
+                renderer.flipX = true;
+            }
+
             if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0;
+                if (Mathf.Abs(input.x) > 0)
+                {
+                    animator.SetTrigger("Walk");
+                }
+                else
+                {
+                    animator.SetTrigger("Idle");
+                }
             }
-
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            else
+            {
+                if (velocity.y > 0)
+                {
+                    animator.SetTrigger("JumpUp");
+                }
+                else if (velocity.y < 0)
+                {
+                    animator.SetTrigger("JumpDown");
+                }
+            }
 
             if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             {

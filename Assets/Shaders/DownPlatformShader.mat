@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RainbowShader
-  m_Shader: {fileID: -6465566751694194690, guid: dbefcfbb33ab0ab46a7f0c6d384ad709,
+  m_Name: DownPlatformShader
+  m_Shader: {fileID: -6465566751694194690, guid: 5d207ccff1b2e0941b86d797a3cc9372,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3313974094743651677}
   - component: {fileID: 3313974094743651679}
   - component: {fileID: 3313974094743651672}
+  - component: {fileID: 1654756758117571116}
   m_Layer: 9
   m_Name: Toggle Platform
   m_TagString: Untagged
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 5780147ca9ee8b24394ef0bfdc1b1a72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,3 +148,29 @@ MonoBehaviour:
   button: {fileID: 0}
   enabledSprite: {fileID: 21300000, guid: 63fbb2ee6a0849345a6fb90f14e34ab0, type: 3}
   disabledSprite: {fileID: 21300000, guid: 6e4d3d412a5a4ee449eae3bb12ff9eb3, type: 3}
+--- !u!114 &1654756758117571116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3313974094743651667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -692352

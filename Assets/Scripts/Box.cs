@@ -31,7 +31,7 @@ public class Box : MonoBehaviour
             nearWall = leftHit || rightHit;
             if (grounded && GetComponent<Rigidbody2D>().velocity.y < .1f)
             {
-                transform.position = new Vector3(transform.position.x, Mathf.Round(2 * transform.position.y) / 2, transform.position.z);
+                //transform.position = new Vector3(transform.position.x, Mathf.Round(2 * transform.position.y) / 2, transform.position.z);
             }
         }
     }

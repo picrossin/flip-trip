@@ -11,7 +11,9 @@ public class Obstacle : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(other.gameObject);
-            Instantiate(death, transform.position, transform.rotation);
+            Death previousDeath = GameObject.FindObjectOfType(typeof(Death)) as Death;
+            if (previousDeath == null)
+                Instantiate(death, transform.position, transform.rotation);
         }
     }
 }

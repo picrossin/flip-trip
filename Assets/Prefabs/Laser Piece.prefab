@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6313844340850352018}
   - component: {fileID: 2440147469991773564}
   - component: {fileID: 7349157027269520148}
+  - component: {fileID: -1394033415595082486}
   m_Layer: 12
   m_Name: Laser Piece
   m_TagString: Obstacle
@@ -135,3 +136,16 @@ MonoBehaviour:
   laserCollision: {fileID: 8259054252885438302, guid: 77d8eba79c99f844cbeef0e0953e4a7c,
     type: 3}
   laserPiece: {fileID: 3633944045738681315}
+--- !u!114 &-1394033415595082486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633944045738681315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026a8d7c40e54fc47a28cf7ea177213c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  death: {fileID: 7335657330120438678, guid: 867a87d26590179419023c688827952b, type: 3}

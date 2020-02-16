@@ -5,10 +5,13 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Door : MonoBehaviour
 {
+    public AudioClip upTrack;
+
     Flip flip;
     LevelLoader loader;
     SpriteRenderer renderer;
     Light2D light;
+    AudioManager am;
 
     void Start()
     {
@@ -16,6 +19,7 @@ public class Door : MonoBehaviour
         flip = GameObject.FindObjectOfType(typeof(Flip)) as Flip;
         renderer = GetComponent<SpriteRenderer>();
         light = GetComponent<Light2D>();
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -38,6 +42,7 @@ public class Door : MonoBehaviour
     {
         if (flip.flipped && other.tag == "Player")
         {
+            am.ChangeBGM(upTrack);
             other.GetComponent<Player>().transitioning = true;
             other.transform.position = new Vector3(transform.position.x, transform.position.y, other.transform.position.z);
             loader.LoadNextLevel();

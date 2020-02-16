@@ -8,7 +8,9 @@ public class Flip : MonoBehaviour
     public bool flipped = false;
     public GameObject level;
     public float smooth = 1f;
+    public AudioClip downTrack;
 
+    AudioManager am;
     BoxCollider2D collider;
     SpriteRenderer renderer;
     Quaternion targetRotation;
@@ -17,6 +19,7 @@ public class Flip : MonoBehaviour
     {
         collider = GetComponent<BoxCollider2D>();
         renderer = GetComponent<SpriteRenderer>();
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class Flip : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            am.ChangeBGM(downTrack);
             flipping = true;
             collider.enabled = false;
             targetRotation = Quaternion.Euler(0, 0, 180);

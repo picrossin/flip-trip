@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6072869512201110629}
   - component: {fileID: 6072869512201110628}
-  - component: {fileID: 6072869512201110627}
+  - component: {fileID: -4386483856409709361}
   - component: {fileID: 6072869512201110626}
   - component: {fileID: 6072869512201110630}
   m_Layer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6072869512201110625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.62, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6072869512201110627
+--- !u!61 &-4386483856409709361
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!50 &6072869512201110626
 Rigidbody2D:
@@ -143,3 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e572c4d0ae180bd45b43de0a67ebab44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partSprites:
+  - {fileID: 21300000, guid: 8c8f552473a4f10419a402ddf5aec1f5, type: 3}
+  - {fileID: 21300000, guid: 84b07c871ba6e8d47850b5f389e11cc0, type: 3}
+  - {fileID: 21300000, guid: 84b07c871ba6e8d47850b5f389e11cc0, type: 3}
+  - {fileID: 21300000, guid: b327229012c75924bb7c1e65c708904d, type: 3}
+  - {fileID: 21300000, guid: 24179633f850654408eda1297556b3f2, type: 3}
+  - {fileID: 21300000, guid: d7d60baf43074164c8f6f56bc5c00812, type: 3}
+  - {fileID: 21300000, guid: 30cbd636b0e96e344a96717b52af27a4, type: 3}
+  - {fileID: 21300000, guid: c0248b3fdc5b117429285496edb8791c, type: 3}

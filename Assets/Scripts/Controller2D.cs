@@ -62,7 +62,7 @@ public class Controller2D : MonoBehaviour
                 if (directionX == -1) collisions.left = true;
                 if (directionX == 1) collisions.right = true;
             }
-            if (boxHit && (boxHit.transform.GetComponent<Box>() != null && boxHit.transform.GetComponent<Box>().nearWall))
+            if (boxHit)
             {
                 velocity.x = (boxHit.distance - skinWidth) * directionX;
                 rayLength = boxHit.distance;

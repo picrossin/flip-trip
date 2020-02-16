@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5686864052795547206}
   - component: {fileID: 5686864052795547207}
   - component: {fileID: 5686864052795547204}
+  - component: {fileID: 6517509101734772631}
   m_Layer: 12
   m_Name: Laser Emitter
   m_TagString: Obstacle
@@ -131,8 +132,21 @@ MonoBehaviour:
     m_Bits: 2048
   laserCollisionMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4096
   laserCollision: {fileID: 8259054252885438302, guid: 77d8eba79c99f844cbeef0e0953e4a7c,
     type: 3}
   laserPiece: {fileID: 3633944045738681315, guid: a553bafc0717ff44887e7895d31e9c9a,
     type: 3}
+--- !u!114 &6517509101734772631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686864052795547200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026a8d7c40e54fc47a28cf7ea177213c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  death: {fileID: 7335657330120438678, guid: 867a87d26590179419023c688827952b, type: 3}
